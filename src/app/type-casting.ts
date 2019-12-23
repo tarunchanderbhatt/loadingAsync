@@ -1,8 +1,8 @@
 export interface TypeCasting {
-  id: number;
-  name: string;
-  age: number;
-  class: any;
-  rollNumber: number;
-  school: string;
+  id: any;
+  name: any;
+  age: any;
+  room: any;
+  roll: any;
+  school: any;
 }

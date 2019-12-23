@@ -8,24 +8,24 @@ export class DataBase implements InMemoryDbService {
         id: 1,
         name: "Parikshit Bhatt",
         age: 6,
-        class: "2th B",
-        rollNumber: 7,
+        room: "2th B",
+        roll: 7,
         school: "D . A . V"
       },
       {
         id: 2,
         name: "Yash Bhatt",
         age: 3,
-        class: "2th B",
-        rollNumber: 9,
+        room: "2th B",
+        roll: 9,
         school: "D . A . V"
       },
       {
         id: 3,
         name: "Trisu Bhatt",
         age: 2,
-        class: "1th B",
-        rollNumber: 10,
+        room: "1th B",
+        roll: 10,
         school: "D . A . V"
       }
     ];

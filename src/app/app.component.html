@@ -1,14 +1,40 @@
-<h1>Observables and Subscribe</h1>
+<div class="container">
+  <h1 class="display-4 text-center">Observables and Subscribe</h1>
+  <h2 class="display-4">Async Filter</h2>
+  <ul>
+    <ng-template ngFor let-data [ngForOf]="myStudentAsinc | async">
+      <ng-template [ngIf]="data.id == 1">
+        <li>
+          {{ data.id }} -- {{ data.name }} -- {{ data.age }} --
+          {{ data.school }} --
+          {{ data.room }}
+        </li>
+      </ng-template>
+    </ng-template>
+  </ul>
+  <br />
+  <hr />
+  <br />
 
-<ul *ngFor="let data of myStudent">
-  <li>{{ data.id }} - {{ data.name }} - {{ data.age }}</li>
-</ul>
+  <h2 class="display-4 text-center">Observables Subscribe and id</h2>
+  <div *ngIf="sId; else loading">
+    {{ sId.id }} | {{ sId.name }} | {{ sId.age }}
+  </div>
+  <ng-template #loading>
+    <img src="../assets/805.gif" />
+  </ng-template>
 
-<hr />
+  <br />
+  <hr />
+  <br />
 
-<h2>Observables and Async</h2>
-
-<ul *ngFor="let data2 of myStudentAsinc | async">
-  <li>{{ data2.id }} | {{ data2.name }} | {{ data2.age }}</li>
-</ul>
+  <h2 class="display-4 text-center">Observables Async pipe and id</h2>
+  <div *ngIf="sidAsinc | async as data4; else load">
+    {{ data4.id }} | {{ data4.name }} | {{ data4.age }}
+  </div>
+  <ng-template #load>
+    <img src="../assets/805.gif" />
+    Loader ...
+  </ng-template>
+</div>
 <router-outlet></router-outlet>
